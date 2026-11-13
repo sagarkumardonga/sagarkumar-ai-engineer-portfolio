@@ -179,103 +179,136 @@ for m in milestones:
             </div>
           </div>
 
-          {/* Right Column: High-Tech Python Terminal Environment */}
-          <div className="lg:col-span-5">
-            <div className="glass-panel rounded-2xl border border-gray-800 shadow-2xl overflow-hidden cyber-glow">
-              {/* Terminal Title Bar */}
-              <div className="px-4 py-3 bg-gray-950 border-b border-gray-800 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                  <span className="text-xs font-mono text-gray-400 ml-2">python3-runtime</span>
-                </div>
+          {/* Right Column: Premium Rounded-Square Profile Portrait */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative group w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[400px]">
+              {/* Subtle Blue & Purple Ambient Glow */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-2 rounded-[28px] bg-gradient-to-tr from-blue-600/35 via-indigo-500/25 to-purple-600/35 blur-2xl opacity-75 group-hover:opacity-100 group-hover:blur-3xl transition-all duration-500 pointer-events-none"
+              />
 
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={handleCopyCode}
-                    className="p-1.5 rounded text-gray-400 hover:text-white hover:bg-gray-800 transition-colors cursor-pointer"
-                    title="Copy code snippet"
-                  >
-                    {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={handleSimulateRun}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-700/60 rounded-md hover:bg-emerald-900/60 transition-colors cursor-pointer"
-                  >
-                    <Play className="w-3 h-3 fill-emerald-400 text-emerald-400" />
-                    <span>{hasRunSnippet ? 'Rerun' : 'Run Script'}</span>
-                  </button>
+              {/* Glowing Gradient Border Frame */}
+              <div className="relative p-[2px] rounded-3xl bg-gradient-to-br from-blue-500/80 via-indigo-500/70 to-purple-500/80 shadow-2xl shadow-indigo-950/60 group-hover:shadow-[0_0_40px_-6px_rgba(99,102,241,0.5)] group-hover:-translate-y-1.5 transition-all duration-500 ease-out">
+                <div className="relative aspect-square rounded-[22px] overflow-hidden bg-gray-950">
+                  <img
+                    src="/assets/profile-photo.png"
+                    alt="Sagar Kumar Donga - Aspiring AI Engineer"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                    loading="eager"
+                  />
+                  {/* Subtle edge vignette to harmonize with dark theme without covering face/upper body */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-t from-gray-950/35 via-transparent to-transparent pointer-events-none"
+                  />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-              {/* Tabs for Snippets */}
-              <div className="flex border-b border-gray-800/80 bg-gray-950/40 text-xs font-mono px-2">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('profile')}
-                  className={`px-3 py-2 border-b-2 transition-colors cursor-pointer ${
-                    activeTab === 'profile'
-                      ? 'border-indigo-500 text-indigo-300 bg-gray-900/40 font-semibold'
-                      : 'border-transparent text-gray-400 hover:text-gray-300'
-                  }`}
-                >
-                  student_profile.py
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('roadmap')}
-                  className={`px-3 py-2 border-b-2 transition-colors cursor-pointer ${
-                    activeTab === 'roadmap'
-                      ? 'border-indigo-500 text-indigo-300 bg-gray-900/40 font-semibold'
-                      : 'border-transparent text-gray-400 hover:text-gray-300'
-                  }`}
-                >
-                  ai_roadmap.py
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('stats')}
-                  className={`px-3 py-2 border-b-2 transition-colors cursor-pointer ${
-                    activeTab === 'stats'
-                      ? 'border-indigo-500 text-indigo-300 bg-gray-900/40 font-semibold'
-                      : 'border-transparent text-gray-400 hover:text-gray-300'
-                  }`}
-                >
-                  stats.json
-                </button>
+        {/* Preserved Interactive Python Terminal Environment */}
+        <div className="mt-14 lg:mt-16">
+          <div className="glass-panel rounded-2xl border border-gray-800 shadow-2xl overflow-hidden cyber-glow">
+            {/* Terminal Title Bar */}
+            <div className="px-4 py-3 bg-gray-950 border-b border-gray-800 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                <div className="w-3 h-3 rounded-full bg-amber-500/80" />
+                <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
+                <span className="text-xs font-mono text-gray-400 ml-2">python3-runtime</span>
               </div>
 
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handleCopyCode}
+                  className="p-1.5 rounded text-gray-400 hover:text-white hover:bg-gray-800 transition-colors cursor-pointer"
+                  title="Copy code snippet"
+                >
+                  {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleSimulateRun}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-700/60 rounded-md hover:bg-emerald-900/60 transition-colors cursor-pointer"
+                >
+                  <Play className="w-3 h-3 fill-emerald-400 text-emerald-400" />
+                  <span>{hasRunSnippet ? 'Rerun' : 'Run Script'}</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Tabs for Snippets */}
+            <div className="flex border-b border-gray-800/80 bg-gray-950/40 text-xs font-mono px-2 overflow-x-auto">
+              <button
+                type="button"
+                onClick={() => setActiveTab('profile')}
+                className={`px-3 py-2 border-b-2 transition-colors cursor-pointer whitespace-nowrap ${
+                  activeTab === 'profile'
+                    ? 'border-indigo-500 text-indigo-300 bg-gray-900/40 font-semibold'
+                    : 'border-transparent text-gray-400 hover:text-gray-300'
+                }`}
+              >
+                student_profile.py
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveTab('roadmap')}
+                className={`px-3 py-2 border-b-2 transition-colors cursor-pointer whitespace-nowrap ${
+                  activeTab === 'roadmap'
+                    ? 'border-indigo-500 text-indigo-300 bg-gray-900/40 font-semibold'
+                    : 'border-transparent text-gray-400 hover:text-gray-300'
+                }`}
+              >
+                ai_roadmap.py
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveTab('stats')}
+                className={`px-3 py-2 border-b-2 transition-colors cursor-pointer whitespace-nowrap ${
+                  activeTab === 'stats'
+                    ? 'border-indigo-500 text-indigo-300 bg-gray-900/40 font-semibold'
+                    : 'border-transparent text-gray-400 hover:text-gray-300'
+                }`}
+              >
+                stats.json
+              </button>
+            </div>
+
+            {/* Side-by-side Code Editor & Console Output on Desktop */}
+            <div className="grid grid-cols-1 lg:grid-cols-12">
               {/* Code Editor Body */}
-              <div className="p-4 font-mono text-xs leading-relaxed overflow-x-auto text-gray-300 max-h-64 bg-gray-950/90">
+              <div className="lg:col-span-7 p-4 font-mono text-xs leading-relaxed overflow-x-auto text-gray-300 max-h-64 bg-gray-950/90 lg:border-r lg:border-gray-800">
                 <pre>
                   <code>{codeSnippets[activeTab]}</code>
                 </pre>
               </div>
 
               {/* Simulated Interactive Console Output */}
-              <div className="bg-gray-950 p-4 border-t border-gray-800 font-mono text-xs">
-                <div className="flex items-center justify-between text-gray-400 mb-2 pb-1 border-b border-gray-800/80">
-                  <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-gray-400">
-                    <Terminal className="w-3.5 h-3.5 text-indigo-400" />
-                    <span>Live Console Output</span>
-                  </span>
-                  <span className="text-[10px] text-gray-400">Python 3.12 (Interactive)</span>
-                </div>
-                <div className="space-y-1 text-gray-300">
-                  {outputLog.map((line, idx) => (
-                    <div
-                      key={idx}
-                      className={
-                        idx >= 3 ? 'text-emerald-400 font-medium' : 'text-gray-400'
-                      }
-                    >
-                      {line}
-                    </div>
-                  ))}
+              <div className="lg:col-span-5 bg-gray-950 p-4 border-t lg:border-t-0 border-gray-800 font-mono text-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-gray-400 mb-2 pb-1 border-b border-gray-800/80">
+                    <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-gray-400">
+                      <Terminal className="w-3.5 h-3.5 text-indigo-400" />
+                      <span>Live Console Output</span>
+                    </span>
+                    <span className="text-[10px] text-gray-400">Python 3.12 (Interactive)</span>
+                  </div>
+                  <div className="space-y-1 text-gray-300">
+                    {outputLog.map((line, idx) => (
+                      <div
+                        key={idx}
+                        className={
+                          idx >= 3 ? 'text-emerald-400 font-medium' : 'text-gray-400'
+                        }
+                      >
+                        {line}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
